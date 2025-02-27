@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px; /* Set a maximum width for the form */
+            margin: auto; /* Center the form */
+            padding: 20px; /* Add padding */
+            border: 1px solid #ccc; /* Add a border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background color */
+        }
+        label {
+            display: block; /* Make label a block element */
+            margin-bottom: 5px; /* Space between label and input */
+        }
+        input[type="range"] {
+            width: 100%; /* Full width input */
+            margin-bottom: 15px; /* Space below the input */
+        }
+        .value-display {
+            margin-bottom: 15px; /* Space below the value display */
+            font-weight: bold; /* Bold text for the value display */
+        }
+        button {
+            padding: 10px 15px; /* Padding for the button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rate Your Experience</h1>
+    <form action="#" method="post">
+        <label for="rating">Rating (1 to 10):</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" value="5" step="1" oninput="updateValue(this.value)">
+        <div class="value-display">Current Value: <span id="current-value">5</span></div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Function to update the displayed value
+        function updateValue(value) {
+            document.getElementById('current-value').textContent = value;
+        }
+    </script>
+
+</body>
+</html>
