@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Experience Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px; /* Set a maximum width for the form */
+            margin: auto; /* Center the form */
+            padding: 20px; /* Add padding */
+            border: 1px solid #ccc; /* Add a border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background color */
+        }
+        label {
+            display: block; /* Make label a block element */
+            margin-bottom: 5px; /* Space between label and input */
+        }
+        select, input[type="radio"], input[type="checkbox"] {
+            margin-bottom: 15px; /* Space below the inputs */
+        }
+        button {
+            padding: 10px 15px; /* Padding for the button */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Preferences Form</h1>
+    <form action="#" method="post">
+        <!-- Select Menu for Programming Language -->
+        <label for="language">Favorite Programming Language:</label>
+        <select id="language" name="language" required>
+            <option value="">Select a language</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="ruby">Ruby</option>
+        </select>
+
+        <!-- Radio Buttons for Expertise Level -->
+        <fieldset>
+            <legend>Level of Expertise:</legend>
+            <label>
+                <input type="radio" name="expertise" value="beginner" required> Beginner
+            </label>
+            <label>
+                <input type="radio" name="expertise" value="intermediate"> Intermediate
+            </label>
+            <label>
+                <input type="radio" name="expertise" value="advanced"> Advanced
+            </label>
+        </fieldset>
+
+        <!-- Checkboxes for Development Platforms -->
+        <fieldset>
+            <legend>Preferred Development Platforms:</legend>
+            <label>
+                <input type="checkbox" name="platforms" value="web"> Web
+            </label>
+            <label>
+                <input type="checkbox" name="platforms" value="mobile"> Mobile
+            </label>
+            <label>
+                <input type="checkbox" name="platforms" value="desktop"> Desktop
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
